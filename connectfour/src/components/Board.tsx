@@ -27,7 +27,8 @@ const ConnectFour: React.FC = () => {
         for (let row = board.length - 1; row >= 0; row--) {
           if (board[row][colIndex] === null) {
             const newBoard = board.map(row => [...row]);
-            newBoard[row][colIndex] = currentPlayer;
+              newBoard[row][colIndex] = currentPlayer;
+              console.log(rowIndex)
             setBoard(newBoard);
                   
             if (checkWin(newBoard, row, colIndex, currentPlayer)) {
